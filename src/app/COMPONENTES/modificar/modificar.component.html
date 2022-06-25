@@ -1,0 +1,42 @@
+<div class="container">
+    <p>Modificar Equipo</p>
+    <div class="row">
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Nombre del equipo</label>
+                    <input [(ngModel)]="equipo.descripcion" type="text" class="form-control" name="descripcion">
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Logo del equipo</label>
+                    <input [(ngModel)]="equipo.logo" type="text" class="form-control" name="logo">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Costo * Hora </label>
+                    <input [(ngModel)]="equipo.costoHora" type="text" class="form-control" name="costoHora">
+                </div>
+
+                <button (click)="modificar()">Guardar</button>
+            </form>
+            
+        </div>
+     
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <img src="{{equipo.logo}}" alt="" width="100" height="100">
+                    
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">{{equipo.logo}}</label>
+                    
+                </div>
+            </form>
+    
+        </div>
+    </div>
+    
+</div>

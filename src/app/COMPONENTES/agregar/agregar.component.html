@@ -1,0 +1,79 @@
+<div class="container">
+    <p>Agregar Equipo</p>
+    <div class="row">
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Nombre del equipo</label>
+                    <input [(ngModel)]="equipo.descripcion" type="text" class="form-control" name="descripcion">
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Logo del equipo</label>
+                    <input [(ngModel)]="equipo.logo" type="text" class="form-control" name="logo">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Costo de alquiler por hora</label>
+                    <input [(ngModel)]="equipo.costoHora" type="text" class="form-control" name="costoHora">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Cantidad de maquinas disponibles</label>
+                    <input [(ngModel)]="equipo.cantidadDisponible" type="text" class="form-control" name="cantidadDisponible">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Costo del operador por hora</label>
+                    <input [(ngModel)]="equipo.costoHoraOperador" type="text" class="form-control" name="costoHoraOperador">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Horas de uso de la maquina</label>
+                    <input [(ngModel)]="equipo.horasdeUso" type="text" class="form-control" name="horasdeUso">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">En existencia</label>
+                    <select name ="estado" id="estado" class="form-select" [(ngModel)]="equipo.estado">
+                        <option  id="estado" [(ngModel)]="equipo.estado" value="1">Si</option>
+                        <option  id="estado" [(ngModel)]="equipo.estado" value="0">No</option>
+                      </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Precio de Venta</label>
+                    <input [(ngModel)]="equipo.costoVenta" type="text" class="form-control" name="costoVenta">
+                </div>
+
+
+                
+                <div class="form-group">
+                    <label class="form-label">Proveedor</label>
+                    <select name="idProveedor" [(ngModel)]="equipo.idProveedor" class="form-control">
+                        <option value="{{idProveedor.idProveedor}}" *ngFor="let idProveedor of ListarProveedores">{{idProveedor.descripcion}}</option>
+                    </select>
+                </div>
+
+                <button (click)="agregar()">Agregar</button>
+            </form>
+            
+        </div>
+     
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <img src="{{equipo.logo}}" alt="" width="100" height="100">
+                    
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">{{equipo.descripcion}}</label>
+                    
+                </div>
+            </form>
+    
+        </div>
+    </div>
+    
+</div>

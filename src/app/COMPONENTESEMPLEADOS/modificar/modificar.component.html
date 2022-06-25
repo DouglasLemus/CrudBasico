@@ -1,0 +1,38 @@
+<div class="container">
+    <p>Modificar empleado</p>
+    <div class="row">
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Numero de Telefono del empleado</label>
+                    <input [(ngModel)]="empleados.numeroTelefono" type="text" class="form-control" name="numeroTelefono">
+                </div>
+                
+			
+                <div class="mb-3">
+                    <label class="form-label">Fotografia del empleado</label>
+                    <input [(ngModel)]="empleados.fotografia" type="text" class="form-control" name="fotografia">
+                </div>
+
+                <button (click)="modificar()">Guardar</button>
+            </form>
+            
+        </div>
+     
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <img src="{{empleados.fotografia}}" alt="" width="100" height="100">
+                    
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">{{empleados.fotografia}}</label>
+                    
+                </div>
+            </form>
+    
+        </div>
+    </div>
+    
+</div>

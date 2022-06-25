@@ -1,0 +1,23 @@
+<div class="container">
+    <p>Modificar Proveedor!</p>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <form>
+                 <div class="mb-3">
+                    <label class="form-label">Numero de Telefono</label>
+                    <input [(ngModel)]="proveedor.numeroTelefono" type="text" class="form-control" name="numeroTelefono">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Persona de Contacto</label>
+                    <input [(ngModel)]="proveedor.personacontacto" type="text" class="form-control" name="personacontacto">
+                </div>
+
+                <button (click)="modificar()" class="btn btn-primary">Guardar</button>
+
+            </form>
+        </div>
+    </div>
+    
+</div>

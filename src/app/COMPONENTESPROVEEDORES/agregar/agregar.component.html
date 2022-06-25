@@ -1,0 +1,52 @@
+<div class="container">
+    <p>Agregar Proveedor!</p>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Nombre del Proveedor</label>
+                    <input [(ngModel)]="Proveedor.descripcion" type="text" class="form-control" name="descripcion">
+                 </div>
+
+                 <div class="mb-3">
+                    <label class="form-label">Numero de Telefono</label>
+                    <input [(ngModel)]="Proveedor.numeroTelefono" type="text" class="form-control" name="numeroTelefono">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Correo Electronico</label>
+                    <input [(ngModel)]="Proveedor.correoelectronico" type="text" class="form-control" name="correoelectronico">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Persona de Contacto</label>
+                    <input [(ngModel)]="Proveedor.personacontacto" type="text" class="form-control" name="personacontacto">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Logo</label>
+                    <input [(ngModel)]="Proveedor.logo" type="text" class="form-control" name="logo">
+                </div>
+
+                <button (click)="agregar()" class="btn btn-primary">Agregar</button>
+
+            </form>
+        </div>
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <img src="{{Proveedor.logo}}" alt="" width="100" height="100">
+                    
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">{{Proveedor.descripcion}}</label>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    
+    
+</div>

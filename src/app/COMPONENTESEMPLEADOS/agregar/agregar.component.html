@@ -1,0 +1,61 @@
+<div class="container">
+    <p>Agregar empleado</p>
+    <div class="row">
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Nombre del empleado</label>
+                    <input [(ngModel)]="empleado.nombre" type="text" class="form-control" name="nombre">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Apellido del empleado</label>
+                    <input [(ngModel)]="empleado.apellido" type="text" class="form-control" name="apellido">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Numero de Telefono del empleado</label>
+                    <input [(ngModel)]="empleado.numeroTelefono" type="text" class="form-control" name="numeroTelefono">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Tipo de Sangre</label>
+                    <select name ="tipoDeSangre" id="tipoDeSangre" class="form-select" [(ngModel)]="empleado.tipoDeSangre">
+                        <option  id="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="A+">A+</option>
+                        <option  id="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="A-">A-</option>
+                        <option  id="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="B+">B+</option>
+                        <option  id="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="B-">B-</option>
+                        <option  id="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="AB+">AB+</option>
+                        <option  id="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="AB-">AB-</option>
+                        <option  id="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="O+">O+</option>
+                        <option  id="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="O-">O-</option>
+                      </select>
+                </div>
+			
+				<div class="mb-3">
+                    <label class="form-label">Fotografia del empleado</label>
+                    <input [(ngModel)]="empleado.fotografia" type="text" class="form-control" name="fotografia">
+                </div>
+
+                <button (click)="agregar()">Agregar</button>
+            </form>
+            
+        </div>
+     
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <img src="{{empleado.fotografia}}" alt="" width="100" height="100">
+                    
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">{{empleado.nombre}} {{empleado.apellido}}</label>
+                    
+                </div>
+            </form>
+    
+        </div>
+    </div>
+    
+</div>

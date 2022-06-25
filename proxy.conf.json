@@ -1,0 +1,52 @@
+{
+    "/maquinas/*":{
+        "target":"http://localhost:3000",
+        "secure": "false",
+        "logLevel":"debug"
+    },
+    "/proveedores/*":{
+        "target":"http://localhost:3000",
+        "secure": "false",
+        "logLevel":"debug"
+    },
+    "/rutas/*":{
+        "target":"http://localhost:3000",
+        "secure": "false",
+        "logLevel":"debug"
+    },
+    "/empleados/*":{
+        "target":"http://localhost:3000",
+        "secure": "false",
+        "logLevel":"debug"
+    },
+    "/rol/*":{
+        "target":"http://localhost:3000",
+        "secure": "false",
+        "logLevel":"debug"
+    },
+    "/empresa/*":{
+        "target":"http://localhost:3000",
+        "secure": "false",
+        "logLevel":"debug"
+    },
+    "/clientes/*":{
+        "target":"http://localhost:3000",
+        "secure": "false",
+        "logLevel":"debug"
+    },
+    "/servicios/*":{
+        "target":"http://localhost:3000",
+        "secure": "false",
+        "logLevel":"debug"
+    },
+    "/contactoemergencia/*":{
+        "target":"http://localhost:3000",
+        "secure": "false",
+        "logLevel":"debug"
+    },
+    "/user/*":{
+        "target":"http://localhost:3000",
+        "secure": "false",
+        "logLevel":"debug"
+    }
+}

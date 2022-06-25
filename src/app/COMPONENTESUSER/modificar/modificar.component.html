@@ -1,0 +1,42 @@
+<div class="container">
+    <p>Modificar users</p>
+    <div class="row">
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Email del users</label>
+                    <input [(ngModel)]="users.email" type="text" class="form-control" name="email">
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input [(ngModel)]="users.password" type="password" class="form-control" name="password">
+                </div>
+				
+				                <div class="mb-3">
+                    <label class="form-label">Fotografia del users</label>
+                    <input [(ngModel)]="users.fotografia" type="text" class="form-control" name="fotografia">
+                </div>
+
+                <button (click)="modificar()">Guardar</button>
+            </form>
+            
+        </div>
+     
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <img src="{{users.fotografia}}" alt="" width="100" height="100">
+                    
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">{{users.fotografia}}</label>
+                    
+                </div>
+            </form>
+    
+        </div>
+    </div>
+    
+</div>

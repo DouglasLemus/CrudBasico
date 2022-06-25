@@ -1,0 +1,36 @@
+<div class="container" >
+    <p>Empleados Empresa TranSport</p>
+  
+    <button routerLink="/addEmpleados" type="button" class="btn btn-dark">Agregar </button>
+  
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Numero de Telefono</th>
+            <th scope="col">Tipo de Sangre</th>
+            <th scope="col">Fotografia</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let empleado of ListarEmpleados">
+            <td>{{empleado.nombre}}</td>
+            <td>{{empleado.apellido}}</td>
+            <td>{{empleado.numeroTelefono}}</td>
+            <td>{{empleado.tipoDeSangre}}</td>
+            <td><img src="{{empleado.fotografia}}" alt="" width="50" height="50"> </td>
+            <td>
+                <button (click)="modificar(empleado.idEmpleado)" type="button" class="btn btn-primary">Editar</button>
+            </td>
+            <td>
+                <button (click)="eliminar(empleado.idEmpleado)" type="button" class="btn btn-danger">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  
+  </div>
+  

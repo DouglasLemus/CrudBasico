@@ -1,0 +1,21 @@
+<div class="container">
+    <p>Modificar cliente</p>
+    <div class="row">
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Direccion del cliente</label>
+                    <input [(ngModel)]="cliente.direccion" type="text" class="form-control" name="direccion">
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Numero del cliente</label>
+                    <input [(ngModel)]="cliente.telefono" type="text" class="form-control" name="telefono">
+                </div>
+
+                <button (click)="modificar()">Guardar</button>
+            </form>
+            
+        </div>
+    </div>
+</div>

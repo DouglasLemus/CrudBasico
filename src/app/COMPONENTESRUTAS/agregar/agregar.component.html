@@ -1,0 +1,40 @@
+<div class="container">
+    <p>Agregar rutas</p>
+    <div class="row">
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Descripcion</label>
+                    <input [(ngModel)]="rutas.descripcion" type="text" class="form-control" name="descripcion">
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Direccion Origen</label>
+                    <input [(ngModel)]="rutas.direccionOrigen" type="text" class="form-control" name="direccionOrigen">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Direccion Destino</label>
+                    <input [(ngModel)]="rutas.direcciondestino" type="text" class="form-control" name="direcciondestino">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Costo de la ruta</label>
+                    <input [(ngModel)]="rutas.costoRuta" type="text" class="form-control" name="costoRuta">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Maquina</label>
+                    <select name="idMaquina" [(ngModel)]="rutas.idMaquina" class="form-control">
+                        <option value="{{idMaquina.idMaquina}}" *ngFor="let idMaquina of ListarEquipo">{{idMaquina.descripcion}}</option>
+                    </select>
+                </div>
+
+                <button (click)="agregar()">Agregar</button>
+            </form>
+            
+        </div>
+ 
+    </div>
+    
+</div>

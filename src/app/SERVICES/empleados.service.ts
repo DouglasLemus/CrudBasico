@@ -46,5 +46,6 @@ export interface Empleados{
   apellido?:string;
   numeroTelefono?:string;
   tipoDeSangre?:string;
-  fotografia:string;
+  fotografia?:string;
+  idContactoEmergencia?:string;
 }

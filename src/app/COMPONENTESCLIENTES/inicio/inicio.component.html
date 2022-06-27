@@ -1,0 +1,38 @@
+<div class="container" >
+    <p>Maquinaria Empresa TranSport</p>
+  
+    <button routerLink="/addClientes" type="button" class="btn btn-dark">Agregar </button>
+  
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">nombre</th>
+            <th scope="col">apellido</th>
+            <th scope="col">direccion</th>
+            <th scope="col">nit</th>
+            <th scope="col">telefono</th>
+            <th scope="col">email</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cliente of ListarClientes">
+            <td>{{cliente.nombre}}</td>
+            <td>{{cliente.apellido}}</td>
+            <td>{{cliente.direccion}}</td>
+            <td>{{cliente.nit}}</td>
+            <td>{{cliente.telefono}}</td>
+            <td>{{cliente.email}}</td>
+            <td>
+                <button (click)="modificar(cliente.idCliente)" type="button" class="btn btn-primary">Editar</button>
+            </td>
+            <td>
+                <button (click)="eliminar(cliente.idCliente)" type="button" class="btn btn-danger">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  
+  </div>
+  

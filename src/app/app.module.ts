@@ -18,6 +18,16 @@ import { ModificarComponentEmpleados } from './COMPONENTESEMPLEADOS/modificar/mo
 import { InicioComponentUser } from './COMPONENTESUSER/inicio/inicio.component';
 import { AgregarComponentUser } from './COMPONENTESUSER/agregar/agregar.component';
 import { ModificarComponentUser } from './COMPONENTESUSER/modificar/modificar.component';
+import { InicioComponentTransporte } from './COMPONENTESTRANSPORTE/inicio/inicio.component';
+import { InicioComponentConstruccion } from './COMPONENTESCONSTRUCCION/inicio/inicio.component';
+import { InicioComponentMinera } from './COMPONENTESMINERA/inicio/inicio.component';
+import { InicioComponentVentaMaquinas } from './COMPONENTESVENTAMAQUINAS/inicio/inicio.component';
+import { InicioComponentClientes } from './COMPONENTESCLIENTES/inicio/inicio.component';
+import { AgregarComponentClientes } from './COMPONENTESCLIENTES/agregar/agregar.component';
+import { ModificarComponentClientes } from './COMPONENTESCLIENTES/modificar/modificar.component';
+import { InicioComponentRutas } from './COMPONENTESRUTAS/inicio/inicio.component';
+import { AgregarComponentRutas } from './COMPONENTESRUTAS/agregar/agregar.component';
+import { ModificarComponentRutas } from './COMPONENTESRUTAS/modificar/modificar.component';
 
 
 @NgModule({
@@ -34,7 +44,17 @@ import { ModificarComponentUser } from './COMPONENTESUSER/modificar/modificar.co
     ModificarComponentEmpleados,
     InicioComponentUser,
     AgregarComponentUser,
-    ModificarComponentUser
+    ModificarComponentUser,
+    InicioComponentTransporte,
+    InicioComponentConstruccion,
+    InicioComponentMinera,
+    InicioComponentVentaMaquinas,
+    InicioComponentClientes,
+    AgregarComponentClientes,
+    ModificarComponentClientes,
+    InicioComponentRutas,
+    AgregarComponentRutas,
+    ModificarComponentRutas
   ],
   imports: [
     BrowserModule,

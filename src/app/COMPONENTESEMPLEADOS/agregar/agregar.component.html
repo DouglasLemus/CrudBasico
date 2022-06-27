@@ -21,15 +21,29 @@
                 <div class="mb-3">
                     <label class="form-label">Tipo de Sangre</label>
                     <select name ="tipoDeSangre" id="tipoDeSangre" class="form-select" [(ngModel)]="empleado.tipoDeSangre">
-                        <option  id="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="A+">A+</option>
-                        <option  id="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="A-">A-</option>
-                        <option  id="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="B+">B+</option>
-                        <option  id="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="B-">B-</option>
-                        <option  id="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="AB+">AB+</option>
-                        <option  id="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="AB-">AB-</option>
-                        <option  id="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="O+">O+</option>
-                        <option  id="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="O-">O-</option>
+                        <option  name="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="A+">A+</option>
+                        <option  name="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="A-">A-</option>
+                        <option  name="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="B+">B+</option>
+                        <option  name="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="B-">B-</option>
+                        <option  name="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="AB+">AB+</option>
+                        <option  name="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="AB-">AB-</option>
+                        <option  name="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="O+">O+</option>
+                        <option  name="tipoDeSangre" [(ngModel)]="empleado.tipoDeSangre" value="O-">O-</option>
                       </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Rol</label>
+                    <select name="idRol" [(ngModel)]="empleado.idRol" class="form-control">
+                        <option value="{{idRoles.idRol}}" *ngFor="let idRoles of ListarRol">{{idRoles.descripcionPuesto}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Contacto</label>
+                    <select name="idContactoEmergencia" [(ngModel)]="empleado.idContactoEmergencia" class="form-control">
+                        <option value="{{contacto.idContactoEmergencia}}" *ngFor="let contacto of ListarContactoEmergencia">{{contacto.nombre}}-{{contacto.apellido}}-{{contacto.numeroTelefono}}</option>
+                    </select>
                 </div>
 			
 				<div class="mb-3">
